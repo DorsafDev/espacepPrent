@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Parent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f9f9f9;
+        }
+
+        .login-container {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+
+        .main-content {
+            width: 60%;
+            margin: 20px;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #333;
+        }
+
+        .section a {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #ff5100;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .section a:hover {
+            background-color: #45a049;
+        }
+
+        .blog-form {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .blog-form input[type="text"],
+        .blog-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .blog-form button {
+            width: 100px;
+            align-self: flex-end;
+            padding: 10px;
+            background-color: #ff5100;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .blog-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Espace Parent</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit" onclick="login()">Se connecter</button>
+        </form>
+    </div>
+
+    <div class="main-content">
+        <div class="section" id="events-section">
+            <h2>Événements et ateliers pour les parents</h2>
+            <a href="lien_zoom" class="zoom-link" target="_blank">Rejoignez notre salle de réunion Zoom</a>
+        </div>
+
+        <div class="section" id="tips-section">
+            <h2>Conseils d'experts en parentalité</h2>
+            <a href="https://www.example.com/conseil1" target="_blank">Conseil 1</a>
+            <a href="https://www.example.com/conseil2" target="_blank">Conseil 2</a>
+            <!-- Ajoutez d'autres liens de conseils ici -->
+        </div>
+
+        <div class="section" id="blog-section">
+            <h2>Blog pour partager vos problèmes et propositions</h2>
+            <form class="blog-form" onsubmit="submitBlogForm(event)">
+                <input type="text" id="blogTitle" placeholder="Votre problème ou proposition" required>
+                <textarea id="blogDescription" placeholder="Décrivez en détail..." required></textarea>
+                <button type="submit">Soumettre</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Vérifier les informations de connexion
+            if (username === 'admin' && password === '12345') {
+                alert('Connexion réussie !');
+                // Ajoutez ici le code pour rediriger vers la page d'accueil après la connexion réussie.
+            } else {
+                alert('Nom d\'utilisateur ou mot de passe incorrect. Veuillez réessayer.');
+            }
+        }
+
+        function submitBlogForm(event) {
+            event.preventDefault();
+            var blogTitle = document.getElementById('blogTitle').value;
+            var blogDescription = document.getElementById('blogDescription').value;
+
+            // Ajoutez ici le code pour gérer la soumission du blog, comme l'enregistrement dans une base de données ou l'affichage sur la page.
+
+            alert('Votre message a été soumis avec succès.');
+            document.getElementById('blogTitle').value = '';
+            document.getElementById('blogDescription').value = '';
+        }
+    </script>
+</body>
+
+</html>

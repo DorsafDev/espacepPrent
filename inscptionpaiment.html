@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations d'Inscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h2,
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Ajouter une bordure en bas pour les sections */
+h2,
+h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+        ul {
+            list-style-type: none;
+            margin-bottom: 30px;
+            padding: 0;}
+            /* Ajouter une marge en haut pour le premier ul */
+   ul:first-of-type {
+  margin-top: 20px;
+}
+
+        
+
+        li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        li:hover {
+            background-color: #e2e2e2;
+        }
+
+        li.completed {
+            text-decoration: line-through;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Informations d'Inscription</h2>
+        <h3>Frais:</h3>
+        <ul>
+            <li id="tuition">Frais de scolarité annuels: [Montant en EUR]</li>
+            <li id="transport">Frais de transport (le cas échéant): [Montant en EUR]</li>
+            <li id="materials">Frais de matériel et de livres: [Montant en EUR]</li>
+        </ul>
+        <h3>Documents Requis:</h3>
+        <ul>
+            <li id="form">Formulaire d'inscription dûment rempli</li>
+            <li id="certificate">Photocopie du certificat de naissance</li>
+            <li id="transcripts">Relevés de notes des années précédentes</li>
+            <li id="medical">Certificat médical récent</li>
+            <li id="vaccination">Preuves de vaccinations à jour</li>
+            <li id="photos">Deux photos d'identité récentes</li>
+        </ul>
+        <h3>Informations Personnelles:</h3>
+        <ul>
+            <li>Nom complet de l'élève</li>
+            <li>Date de naissance</li>
+            <li>Adresse permanente</li>
+            <li>Nom et coordonnées des parents ou tuteurs</li>
+        </ul>
+    </div>
+
+    <script>
+        const tuition = document.getElementById('tuition');
+        const transport = document.getElementById('transport');
+        const materials = document.getElementById('materials');
+
+        tuition.addEventListener('mouseover', function() {
+            tuition.style.backgroundColor = '#d1e8f7';
+        });
+
+        tuition.addEventListener('mouseout', function() {
+            tuition.style.backgroundColor = 'transparent';
+        });
+
+        transport.addEventListener('mouseover', function() {
+            transport.style.backgroundColor = '#d1e8f7';
+        });
+
+        transport.addEventListener('mouseout', function() {
+            transport.style.backgroundColor = 'transparent';
+        });
+
+        materials.addEventListener('mouseover', function() {
+            materials.style.backgroundColor = '#d1e8f7';
+        });
+
+        materials.addEventListener('mouseout', function() {
+            materials.style.backgroundColor = 'transparent';
+        });
+
+        const documentItems = document.querySelectorAll('ul:nth-of-type(2) li');
+        documentItems.forEach(item => {
+            item.addEventListener('click', function() {
+                item.classList.toggle('completed');
+            });
+        });
+    </script>
+</body>
+</html>

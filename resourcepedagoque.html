@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources Pédagogiques</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+            margin-bottom: 30px;
+            animation: fadeIn 1s;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        nav {
+            background:#ff5100;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+            float: left;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background: #ddd;
+            color: #333;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="text-center">Ressources Pédagogiques</h1>
+        </header>
+        <nav>
+            <a href="#guides">Guides pédagogiques</a>
+            <a href="#articles">Articles et conseils pédagogiques</a>
+            <a href="#supports">Supports pour les devoirs à la maison</a>
+            <a href="#materiel">Matériel de développement parental</a>
+            <a href="#lectures">Suggestions de lectures</a>
+        </nav>
+        <section id="guides">
+            <h2>Guides pédagogiques</h2>
+            <p>Voici une liste de guides pédagogiques utiles :</p>
+            <ul>
+                <li>Guide pratique pour l'enseignement des mathématiques</li>
+                <li>Guide de stratégies d'enseignement pour les langues étrangères</li>
+                <li>Guide pour la promotion de la lecture chez les jeunes enfants</li>
+            </ul>
+        </section>
+
+        <!-- Ajout des autres sections -->
+        <section id="articles">
+            <h2>Articles et conseils pédagogiques</h2>
+            <p>Consultez les derniers articles et conseils pédagogiques :</p>
+            <ul>
+                <li>Comment encourager la créativité chez les élèves</li>
+                <li>Stratégies pour améliorer la participation en classe</li>
+                <li>Importance de la différenciation pédagogique pour la réussite des élèves</li>
+            </ul>
+        </section>
+
+        <section id="supports">
+            <h2>Supports pour les devoirs à la maison</h2>
+            <p>Voici quelques supports utiles pour les devoirs à la maison :</p>
+            <ul>
+                <li>Fiches d'exercices pour la pratique des mathématiques</li>
+                <li>Exemples de projets de sciences à réaliser à la maison</li>
+                <li>Ressources en ligne pour améliorer les compétences en écriture</li>
+            </ul>
+        </section>
+
+        <section id="materiel">
+            <h2>Matériel de développement parental</h2>
+            <p>Découvrez du matériel pour aider les parents dans le développement de leurs enfants :</p>
+            <ul>
+                <li>Livrets d'activités pour renforcer les compétences sociales</li>
+                <li>Vidéos éducatives sur l'apprentissage précoce des enfants</li>
+                <li>Outils interactifs pour favoriser la communication en famille</li>
+            </ul>
+        </section>
+
+        <section id="lectures">
+            <h2>Suggestions de lectures et de ressources complémentaires</h2>
+            <p>Explorez ces lectures et ressources complémentaires pour enrichir vos connaissances :</p>
+            <ul>
+                <li>Livre recommandé : "Le cerveau de votre enfant en développement" par Jane Doe</li>
+                <li>Site web utile : www.pedagogie-education.com</li>
+                <li>Podcast éducatif : "Pédagogie en pratique" par John Smith</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Affichage de la section correspondante au clic
+        $(document).ready(function () {
+            $("nav a").click(function () {
+                var target = $(this).attr('href');
+                $('section').hide();
+                $(target).fadeIn(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
